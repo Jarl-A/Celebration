@@ -135,12 +135,11 @@ body {
     font-weight: 600;
 }
 
-#cake {
-    position: relative;
+
+#cake-container {
+  position: relative;
   width: 200px;
-  height: 100px;
-  background: #d2691e;
-  border-radius: 10px;
+  margin: auto;
 }
 
 /* ============================================== Candle*/
@@ -458,6 +457,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
