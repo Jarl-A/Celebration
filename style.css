@@ -196,6 +196,9 @@ body {
     height: 25px;
     width: 4px;
     margin-left: -2px;
+    /* Adjusted starting position for mobile animation */
+    transform: translateY(-220px);
+    animation: in-tablet 500ms 6s ease-out forwards;
   }
 }
 
@@ -205,6 +208,9 @@ body {
     height: 20px;
     width: 3px;
     margin-left: -1.5px;
+    /* Adjusted starting position for mobile animation */
+    transform: translateY(-180px);
+    animation: in-mobile 500ms 6s ease-out forwards;
   }
 }
 
@@ -277,6 +283,18 @@ body {
 }
 
 @keyframes in {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes in-tablet {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes in-mobile {
   to {
     transform: translateY(0);
   }
@@ -556,12 +574,6 @@ body {
   }
 }
 
-.music-info h4 {
-  margin: 0;
-  /* Made music title responsive */
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-}
-
 .progress-container {
   background: #ffffff;
   border-radius: 5px;
@@ -652,6 +664,7 @@ html,
 body {
   overflow-x: hidden;
 }
+
 
 
 
