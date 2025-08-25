@@ -136,9 +136,11 @@ body {
 }
 
 #cake {
-    display: block;
     position: relative;
-    margin: -15em auto 0 auto;
+  width: 200px;
+  height: 100px;
+  background: #d2691e;
+  border-radius: 10px;
 }
 
 /* ============================================== Candle*/
@@ -456,6 +458,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
