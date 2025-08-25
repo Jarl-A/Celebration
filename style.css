@@ -145,7 +145,7 @@ body {
 
 .cake {
     background: #ffffff;
-    border-radius: 10px;
+    border-radius: 3px;
     position: absolute;
     left: 50%;
     bottom: 200%;                  /* نقله أعلى حافة #cake */
@@ -455,6 +455,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
