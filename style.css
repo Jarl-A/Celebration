@@ -168,6 +168,8 @@ body {
   backface-visibility: hidden;
   animation: in 500ms 6s ease-out forwards;
   bottom: 100%;
+  /* Added z-index to ensure candle appears above cake and other elements */
+  z-index: 15;
 }
 
 .cake:after,
