@@ -138,6 +138,8 @@ body {
 #cake {
     display: block;
     position: relative;
+    bottom: 0
+    border-radius: 10px    
     margin: -15em auto 0 auto;
 }
 
@@ -148,7 +150,7 @@ body {
     border-radius: 10px;
     position: absolute;
     left: 50%;
-    bottom: 50%;                  /* نقله أعلى حافة #cake */
+    bottom: 100%;                  /* نقله أعلى حافة #cake */
     margin-left: -2.4px;
     margin-top: -10px;
     width: 6px;
@@ -455,6 +457,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
