@@ -177,13 +177,7 @@ body {
     left: 0;
 }
 
-@media (max-width: 600px) {
-  .cake {
-    top: 100px;          /* اختباري قيمة جديدة مناسبة */
-    transform: translate(-50%, -50px); /* غيّري -50px حسب التجربة */
-    animation: none;    /* إذا لم تريدي الأنيميشن على الجوال */
-  }
-}
+
 
 
 /* ============================================== Fire
@@ -455,6 +449,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
