@@ -148,13 +148,13 @@ body {
     background: #ffffff;
     border-radius: 10px;
     position: absolute;
-    top: 228px; /* هذا يحدد ارتفاع الشمعة فوق الكيكة */
+    top: 220px; /* هذا يحدد ارتفاع الشمعة فوق الكيكة */
     left: 50%;
     margin-left: -2.4px;
     margin-top: -8.33333333px;
     width: 5px;
     height: 35px;
-    transform: translateY(-300px);
+    transform: translateY(-310px);
     backface-visibility: hidden;
     animation: drop 0.6s ease-out 6s forwards;
 }
@@ -457,6 +457,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
