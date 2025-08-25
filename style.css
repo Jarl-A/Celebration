@@ -155,7 +155,7 @@ body {
     height: 35px;
     transform: translateY(-300px)
     backface-visibility: hidden;
-    animation: in 500ms 6s ease-out forwards;
+    animation: drop 0.6s ease-out 6s forwards;
 }
 
 .cake:after,
@@ -177,11 +177,12 @@ body {
     left: 0;
 }
 
-@media (max-width: 600px) {
-  .cake {
-    top: 100px;          /* اختباري قيمة جديدة مناسبة */
-    transform: translate(-50%, -50px); /* غيّري -50px حسب التجربة */
-    animation: none;    /* إذا لم تريدي الأنيميشن على الجوال */
+@keyframes drop {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 
@@ -455,6 +456,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
