@@ -149,13 +149,13 @@ body {
     background: #ffffff;
     border-radius: 10px;
     position: absolute;
+    top: 120px; /* هذا يحدد ارتفاع الشمعة فوق الكيكة */
     left: 50%;
-    bottom: 100%;                  /* نقله أعلى حافة #cake */
     margin-left: -2.4px;
     margin-top: -10px;
     width: 6px;
     height: 40px;
-    transform: translateX(-50%) translateY(-60px); /* ترتفع فوق الكيكة */
+    transform: translateX(-50%)
     backface-visibility: hidden;
     animation: in 500ms ease-out 7s forwards;
 }
@@ -457,6 +457,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
