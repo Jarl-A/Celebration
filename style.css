@@ -155,8 +155,7 @@ body {
     height: 40px;
     transform: translateY(-300px);
     backface-visibility: hidden;
-    animation: in 500ms 6s ease-out forwards;
-    bottom: 100%;                  /* نقله أعلى حافة #cake */
+    animation: in 500ms ease-out 6s forwards;
 }
 
 .cake:after,
@@ -456,6 +455,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
