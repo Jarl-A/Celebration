@@ -156,7 +156,7 @@ body {
     height: 35px;
     transform: translateY(-310px);
     backface-visibility: hidden;
-    animation: in 400ms 6s ease-out forwards;
+    animation: drop 0.6s ease-out 6s forwards;
 }
 
 .cake:after,
@@ -179,12 +179,8 @@ body {
 }
 
 @keyframes drop {
-  from {
-    transform: translateY(-300px);
-  }
-  to {
-    transform: translateY(0);
-  }
+  0% { transform: translateY(-300px); }
+  100% { transform: translateY(0); }
 }
 
 
@@ -457,6 +453,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
