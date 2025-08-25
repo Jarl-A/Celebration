@@ -184,7 +184,7 @@ body {
     left: 0;
 }
 
-@/* حركة النزول */
+/* حركة النزول */
 @keyframes drop {
   from {
     transform: translateX(-50%) translateY(-100%);
@@ -194,7 +194,7 @@ body {
   }
 }
 
-/* الجوال: نثبت الشمعة بدون حركة */
+/* في الجوال: نثبت الشمعة بدون حركة */
 @media (max-width: 600px) {
   .candle {
     animation: none;
@@ -472,6 +472,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
