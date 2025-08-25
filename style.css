@@ -138,26 +138,24 @@ body {
 #cake {
     display: block;
     position: relative;
-    bottom: 0
-    border-radius: 10px    
     margin: -15em auto 0 auto;
 }
 
 /* ============================================== Candle*/
 
-.cake {
+.candle {
     background: #ffffff;
     border-radius: 10px;
     position: absolute;
-    top: 120px; /* هذا يحدد ارتفاع الشمعة فوق الكيكة */
+    top: 228px; /* هذا يحدد ارتفاع الشمعة فوق الكيكة */
     left: 50%;
     margin-left: -2.4px;
-    margin-top: -10px;
-    width: 6px;
-    height: 40px;
-    transform: translateX(-50%)
+    margin-top: -8.33333333px;
+    width: 5px;
+    height: 35px;
+    transform: translateY(-300px)
     backface-visibility: hidden;
-    animation: in 500ms ease-out 7s forwards;
+    animation: in 500ms 6s ease-out forwards;
 }
 
 .cake:after,
@@ -457,6 +455,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
