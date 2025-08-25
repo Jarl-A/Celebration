@@ -148,12 +148,12 @@ body {
     border-radius: 3px;
     position: absolute;
     left: 50%;
-    bottom: 200%;                  /* نقله أعلى حافة #cake */
+    bottom: 0;                  /* نقله أعلى حافة #cake */
     margin-left: -2.4px;
     margin-top: -10px;
     width: 6px;
     height: 40px;
-    transform: translateY(-300px);
+    transform: translateX(-50%) translateY(-60px); /* ترتفع فوق الكيكة */
     backface-visibility: hidden;
     animation: in 500ms ease-out 7s forwards;
 }
@@ -455,6 +455,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
