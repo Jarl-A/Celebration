@@ -151,7 +151,7 @@ body {
     left: 50%;
     bottom: 100%;                  /* نقله أعلى حافة #cake */
     margin-left: -2.4px;
-    margin-top: -8.33333333px;
+    margin-top: -10px;
     width: 5px;
     height: 35px;
     transform: translateX(-50%) translateY(-100%); /* ترتفع بارتفاعها */
@@ -464,6 +464,7 @@ img, video {
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
+
 
 
 
