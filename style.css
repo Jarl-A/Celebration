@@ -135,6 +135,8 @@ body {
   display: block;
   position: relative;
   margin: -15em auto 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* ============================================== New Candle */
@@ -491,9 +493,9 @@ h2 {
 
 /* Hiding old candle elements */
 .cake {
-  display: none;
+  display: none !important;
 }
 
 .fuego {
-  display: none;
+  display: none !important;
 }
