@@ -160,10 +160,10 @@ body {
   background: #ffffff;
   border-radius: 10px;
   position: absolute;
-  top: 228px;
+  top: 50%;
   left: 50%;
   margin-left: -2.4px;
-  margin-top: -8.33333333px;
+  margin-top: -200px; /* Position above the cake */
   width: 5px;
   height: 35px;
   transform: translateY(-300px);
@@ -196,7 +196,7 @@ body {
 /* Improved candle positioning for mobile */
 @media (max-width: 768px) {
   .cake {
-    top: 170px;
+    margin-top: -150px;
     height: 25px;
     width: 4px;
     margin-left: -2px;
@@ -208,7 +208,7 @@ body {
 
 @media (max-width: 480px) {
   .cake {
-    top: 135px;
+    margin-top: -120px;
     height: 20px;
     width: 3px;
     margin-left: -1.5px;
@@ -668,8 +668,6 @@ html,
 body {
   overflow-x: hidden;
 }
-
-
 
 
 
