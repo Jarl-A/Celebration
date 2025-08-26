@@ -15,17 +15,24 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+body {
   background-image: linear-gradient(0deg, rgb(102, 126, 234) 23.8%, rgb(118, 75, 162) 92%);
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: "Lato", sans-serif;
-  /* Added padding to prevent edge cutoff on mobile */
-  padding: 10px;
+  margin: 0;
 }
 
 /* طبقة النجوم الشفافة فوق الخلفية وتحت المحتوى */
 #stars {
   position: fixed;
   inset: 0;
+  /* top/right/bottom/left: 0 */
   pointer-events: none;
   z-index: 0;
 }
@@ -128,30 +135,6 @@ body {
   display: block;
   position: relative;
   margin: -15em auto 0 auto;
-  /* Made SVG responsive with max dimensions and proper scaling */
-  max-width: 200px;
-  max-height: 400px;
-  width: 100%;
-  height: auto;
-  /* Added z-index to ensure SVG stays below candle */
-  z-index: 5;
-}
-
-/* Improved mobile responsiveness for cake SVG */
-@media (max-width: 768px) {
-  #cake {
-    max-width: 150px;
-    max-height: 300px;
-    margin: -10em auto 0 auto;
-  }
-}
-
-@media (max-width: 480px) {
-  #cake {
-    max-width: 120px;
-    max-height: 240px;
-    margin: -8em auto 0 auto;
-  }
 }
 
 /* ============================================== Candle*/
@@ -160,8 +143,8 @@ body {
   background: #ffffff;
   border-radius: 10px;
   position: absolute;
-  /* Restored original positioning logic */
-  top: 228px;
+  /* Fixed candle position to appear above the cake */
+  top: 50px;
   left: 50%;
   margin-left: -2.4px;
   margin-top: -8.33333333px;
@@ -171,8 +154,6 @@ body {
   backface-visibility: hidden;
   animation: in 500ms 6s ease-out forwards;
   bottom: 100%;
-  /* Increased z-index to ensure candle appears above SVG cake */
-  z-index: 20;
 }
 
 .cake:after,
@@ -194,8 +175,6 @@ body {
   left: 0;
 }
 
-/* Improved candle positioning for mobile */
-/* Restored original simple mobile positioning */
 @media (max-width: 600px) {
   .cake {
     top: 50px;
@@ -204,27 +183,8 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .cake {
-    top: 150px;
-    height: 25px;
-    width: 4px;
-    margin-left: -2px;
-  }
-}
-
-@media (max-width: 480px) {
-  .cake {
-    top: 50px;
-    height: 20px;
-    width: 3px;
-    margin-left: -1.5px;
-    transform: translate(-50%, -50px);
-    animation: none;
-  }
-}
-
-/* ============================================== Fire */
+/* ============================================== Fire
+      */
 
 .fuego {
   border-radius: 100%;
@@ -256,26 +216,8 @@ body {
   animation: fuego 0.2s 6.5s infinite;
 }
 
-/* Responsive flame sizing */
-@media (max-width: 768px) {
-  .fuego {
-    width: 5px;
-    height: 14px;
-    margin-left: -2.5px;
-    top: -15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .fuego {
-    width: 4px;
-    height: 12px;
-    margin-left: -2px;
-    top: -12px;
-  }
-}
-
-/* ============================================== Animation Fire */
+/* ============================================== Animation Fire
+      */
 
 @keyframes fuego {
   0%,
@@ -292,20 +234,7 @@ body {
   }
 }
 
-/* Removed unnecessary animation keyframes */
 @keyframes in {
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes in-tablet {
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes in-mobile {
   to {
     transform: translateY(0);
   }
@@ -320,8 +249,6 @@ body {
   z-index: 2;
   position: relative;
   animation: textGlow 2s ease-in-out infinite alternate;
-  /* Added responsive padding */
-  padding: 0 20px;
 }
 
 .text h1 {
@@ -335,8 +262,6 @@ body {
   background-clip: text;
   letter-spacing: -0.02em;
   margin-top: 1em;
-  /* Made text responsive */
-  font-size: clamp(1.5rem, 5vw, 2.7rem);
 }
 
 /* الاسم */
@@ -346,8 +271,6 @@ body {
   margin: 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   color: #382a5f;
-  /* Made name text responsive */
-  font-size: clamp(1.2rem, 4vw, 2rem);
 }
 
 @keyframes textGlow {
@@ -372,49 +295,11 @@ body {
   position: relative;
   margin: 100px 0;
   z-index: 10;
-  /* Made music container responsive */
-  max-width: 90vw;
-  width: 100%;
-  max-width: 400px;
-}
-
-/* Mobile responsive music container */
-@media (max-width: 768px) {
-  .music-container {
-    padding: 15px 20px;
-    margin: 50px 0;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .music-container {
-    padding: 10px 15px;
-    margin: 30px 0;
-  }
 }
 
 .img-container {
   position: relative;
   width: 110px;
-  /* Made image container responsive */
-  flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-  .img-container {
-    width: 80px;
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .img-container {
-    width: 60px;
-    margin-bottom: 10px;
-  }
 }
 
 .img-container::after {
@@ -438,20 +323,8 @@ body {
   bottom: 0;
   left: 0;
   animation: rotate 3s linear infinite;
+
   animation-play-state: paused;
-}
-
-/* Responsive image sizing */
-@media (max-width: 768px) {
-  .img-container img {
-    height: 80px;
-  }
-}
-
-@media (max-width: 480px) {
-  .img-container img {
-    height: 60px;
-  }
 }
 
 .music-container.play .img-container img {
@@ -473,14 +346,6 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  /* Added responsive gap */
-  gap: 10px;
-}
-
-@media (max-width: 768px) {
-  .navigation {
-    margin-top: 10px;
-  }
 }
 
 .action-btn {
@@ -491,55 +356,11 @@ body {
   cursor: pointer;
   padding: 10px;
   margin: 0 20px;
-  /* Made buttons more touch-friendly */
-  min-width: 44px;
-  min-height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .action-btn {
-    margin: 0 10px;
-    font-size: 18px;
-    padding: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .action-btn {
-    margin: 0 5px;
-    font-size: 16px;
-    padding: 6px;
-    min-width: 40px;
-    min-height: 40px;
-  }
 }
 
 .action-btn.action-btn-big {
   color: #6155a3;
   font-size: 30px;
-  /* Made big button responsive */
-  min-width: 60px;
-  min-height: 60px;
-}
-
-@media (max-width: 768px) {
-  .action-btn.action-btn-big {
-    font-size: 24px;
-    min-width: 50px;
-    min-height: 50px;
-  }
-}
-
-@media (max-width: 480px) {
-  .action-btn.action-btn-big {
-    font-size: 20px;
-    min-width: 44px;
-    min-height: 44px;
-  }
 }
 
 .action-btn:focus {
@@ -560,29 +381,13 @@ body {
   z-index: 0;
 }
 
-/* Responsive music info positioning */
-@media (max-width: 768px) {
-  .music-info {
-    position: static;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    opacity: 1;
-    transform: none;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-  }
-}
-
 .music-container.play .music-info {
   opacity: 1;
   transform: translateY(-100%);
 }
 
-@media (max-width: 768px) {
-  .music-container.play .music-info {
-    transform: none;
-  }
+.music-info h4 {
+  margin: 0;
 }
 
 .progress-container {
@@ -592,14 +397,6 @@ body {
   margin: 10px 0;
   height: 4px;
   width: 100%;
-  /* Made progress bar more touch-friendly on mobile */
-  min-height: 8px;
-}
-
-@media (max-width: 480px) {
-  .progress-container {
-    min-height: 12px;
-  }
 }
 
 .progress {
@@ -610,7 +407,6 @@ body {
   transition: width 0.1s linear;
 }
 
-/* General responsive utilities */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -634,27 +430,24 @@ video {
   display: block;
 }
 
-/* Enhanced mobile breakpoints */
+/* من 0 إلى 600px (جوال) */
 @media (max-width: 600px) {
-  body {
-    padding: 5px;
-  }
-
   .navbar {
     flex-direction: column;
   }
-
   h1 {
     font-size: 1.5rem;
   }
 }
 
+/* من 601 إلى 1024px (تابلت) */
 @media (min-width: 601px) and (max-width: 1024px) {
   .sidebar {
     display: none;
   }
 }
 
+/* من 1025px وما فوق (ديسكتوب) */
 @media (min-width: 1025px) {
   .content {
     max-width: 1200px;
@@ -664,14 +457,4 @@ video {
 
 h2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
-}
-
-/* Prevent horizontal overflow */
-* {
-  max-width: 100%;
-}
-
-html,
-body {
-  overflow-x: hidden;
 }
