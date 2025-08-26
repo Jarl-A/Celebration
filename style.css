@@ -133,6 +133,8 @@ body {
   max-height: 400px;
   width: 100%;
   height: auto;
+  /* Added z-index to ensure SVG stays below candle */
+  z-index: 5;
 }
 
 /* Improved mobile responsiveness for cake SVG */
@@ -168,8 +170,8 @@ body {
   backface-visibility: hidden;
   animation: in 500ms 6s ease-out forwards;
   bottom: 100%;
-  /* Added z-index to ensure candle appears above cake and other elements */
-  z-index: 15;
+  /* Increased z-index to ensure candle appears above SVG cake */
+  z-index: 20;
 }
 
 .cake:after,
@@ -666,7 +668,6 @@ html,
 body {
   overflow-x: hidden;
 }
-
 
 
 
