@@ -160,10 +160,11 @@ body {
   background: #ffffff;
   border-radius: 10px;
   position: absolute;
-  top: 50%;
+  /* Restored original positioning logic */
+  top: 228px;
   left: 50%;
   margin-left: -2.4px;
-  margin-top: -200px; /* Position above the cake */
+  margin-top: -8.33333333px;
   width: 5px;
   height: 35px;
   transform: translateY(-300px);
@@ -194,27 +195,32 @@ body {
 }
 
 /* Improved candle positioning for mobile */
+/* Restored original simple mobile positioning */
+@media (max-width: 600px) {
+  .cake {
+    top: 50px;
+    transform: translate(-50%, -50px);
+    animation: none;
+  }
+}
+
 @media (max-width: 768px) {
   .cake {
-    margin-top: -150px;
+    top: 150px;
     height: 25px;
     width: 4px;
     margin-left: -2px;
-    /* Adjusted starting position for mobile animation */
-    transform: translateY(-220px);
-    animation: in-tablet 500ms 6s ease-out forwards;
   }
 }
 
 @media (max-width: 480px) {
   .cake {
-    margin-top: -120px;
+    top: 50px;
     height: 20px;
     width: 3px;
     margin-left: -1.5px;
-    /* Adjusted starting position for mobile animation */
-    transform: translateY(-180px);
-    animation: in-mobile 500ms 6s ease-out forwards;
+    transform: translate(-50%, -50px);
+    animation: none;
   }
 }
 
@@ -286,6 +292,7 @@ body {
   }
 }
 
+/* Removed unnecessary animation keyframes */
 @keyframes in {
   to {
     transform: translateY(0);
@@ -668,9 +675,3 @@ html,
 body {
   overflow-x: hidden;
 }
-
-
-
-
-
-
